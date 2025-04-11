@@ -432,40 +432,65 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container nav-content">
-            <!-- Simplified logo -->
-            <a href="#home" class="logo">
-                <amp-img src="small-logo.png" width="50" height="50" layout="fixed"></amp-img>
-                <span>Royal Ekta Foundation</span>
+    <!-- In the Navigation section -->
+<nav class="navbar">
+    <div class="container nav-content">
+        <div class="logo">
+            <a href="#home" style="display: flex; align-items: center; text-decoration: none;">
+                <amp-img src="small-logo.png" alt="Royal Ekta Foundation Logo" width="50" height="50" layout="fixed"></amp-img>
+                <span style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color);">Royal Ekta Foundation</span>
             </a>
-
-            <!-- Mobile Menu Button -->
-            <button class="menu-toggle mobile-only" on="tap:sidebar.toggle" aria-label="Open menu">
-                ☰
-            </button>
         </div>
-    </nav>
-
-    <!-- Revised Sidebar -->
-    <amp-sidebar id="sidebar" layout="nodisplay" side="right" class="mobile-menu" style="width: 80vw; z-index: 1001;">
-        <div class="mobile-nav-header">
-            <button class="sidebar-close" on="tap:sidebar.close" aria-label="Close menu">
-                ✕
-            </button>
+        
+        <!-- Desktop Navigation -->
+        <div class="nav-links desktop-only">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#causes">Causes</a>
+            <a href="#donate">Donate</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#rules">Rules</a>
+            <a href="#team">Team</a>
+            <a href="#contact">Contact</a>
         </div>
-        <nav class="mobile-nav">
-            <a href="#home" on="tap:sidebar.close">Home</a>
-            <a href="#about" on="tap:sidebar.close">About</a>
-            <a href="#causes" on="tap:sidebar.close">Causes</a>
-            <a href="#donate" on="tap:sidebar.close">Donate</a>
-            <a href="#gallery" on="tap:sidebar.close">Gallery</a>
-            <a href="#rules" on="tap:sidebar.close">Rules</a>
-            <a href="#team" on="tap:sidebar.close">Team</a>
-            <a href="#contact" on="tap:sidebar.close">Contact</a>
-        </nav>
-    </amp-sidebar>
-    
+
+        <!-- Mobile Menu Button -->
+        <button class="menu-toggle mobile-only" on="tap:sidebar.toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+        </button>
+
+        <!-- Mobile Sidebar -->
+        <amp-sidebar id="sidebar" layout="nodisplay" side="right" style="width: 80vw; z-index: 9999;">
+            <div class="mobile-nav-header">
+                <button class="sidebar-close" on="tap:sidebar.close" aria-label="Close menu">
+                    ✕
+                </button>
+            </div>
+            <nav class="nav-links mobile-nav">
+                <a href="#home" role="button" tabindex="0" on="tap:sidebar.close">Home</a>
+                <a href="#about" role="button" tabindex="0" on="tap:sidebar.close">About</a>
+                <a href="#causes" role="button" tabindex="0" on="tap:sidebar.close">Causes</a>
+                <a href="#donate" role="button" tabindex="0" on="tap:sidebar.close">Donate</a>
+                <a href="#gallery" role="button" tabindex="0" on="tap:sidebar.close">Gallery</a>
+                <a href="#rules" role="button" tabindex="0" on="tap:sidebar.close">Rules</a>
+                <a href="#team" role="button" tabindex="0" on="tap:sidebar.close">Team</a>
+                <a href="#contact" role="button" tabindex="0" on="tap:sidebar.close">Contact</a>
+            </nav>
+        </amp-sidebar>
+        <!-- Mobile Sidebar (new version) -->
+      <amp-sidebar id="sidebar" layout="nodisplay" side="right" class="mobile-menu">
+      <div class="mobile-nav-header">
+        <button class="sidebar-close" on="tap:sidebar.close">
+            ✕
+        </button>
+      </div>
+      <nav class="nav-links mobile-nav">
+        
+      </nav>
+      </amp-sidebar>
+    </div>
+</nav>
+
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
