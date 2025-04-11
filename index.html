@@ -18,6 +18,70 @@
     <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
     <style amp-custom>
         /* Add these to your existing CSS */
+        /* Add to your amp-custom styles */
+@media (max-width: 768px) {
+    amp-sidebar {
+        width: 80vw;
+        max-width: 300px;
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.mobile-nav {
+        display: flex !important;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .nav-links.mobile-nav a {
+        color: var(--dark-color) !important;
+        padding: 15px 25px;
+        font-size: 1.1rem;
+        text-decoration: none;
+        transition: background 0.3s ease;
+        position: relative;
+        /* Ensure touch target size */
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-links.mobile-nav a:active {
+        background: var(--light-color);
+    }
+
+    /* Add visual feedback for taps */
+    .nav-links.mobile-nav a:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.05);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .nav-links.mobile-nav a:active:after {
+        opacity: 1;
+    }
+}
+.mobile-nav-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.sidebar-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--dark-color);
+    padding: 5px;
+    margin: -5px;
+}
 .desktop-only {
     display: flex;
 }
@@ -41,18 +105,6 @@
     }
 }
         /* Add this to your existing CSS */
-@media (max-width: 768px) {
-    amp-sidebar .nav-links {
-        display: flex !important;
-        padding: 20px;
-    }
-
-    amp-sidebar .nav-links a {
-        color: var(--dark-color);
-        padding: 10px;
-        font-size: 1.1rem;
-    }
-}
         /* Original CSS with minor adjustments */
         * {
             margin: 0;
@@ -404,18 +456,24 @@
         </button>
 
         <!-- Mobile Sidebar -->
-        <amp-sidebar id="sidebar" layout="nodisplay" side="right">
-            <div class="nav-links mobile-nav" style="padding: 20px;">
-                <a href="#home" on="tap:sidebar.close">Home</a>
-                <a href="#about" on="tap:sidebar.close">About</a>
-                <a href="#causes" on="tap:sidebar.close">Causes</a>
-                <a href="#donate" on="tap:sidebar.close">Donate</a>
-                <a href="#gallery" on="tap:sidebar.close">Gallery</a>
-                <a href="#rules" on="tap:sidebar.close">Rules</a>
-                <a href="#team" on="tap:sidebar.close">Team</a>
-                <a href="#contact" on="tap:sidebar.close">Contact</a>
-            </div>
-        </amp-sidebar>
+        <!-- Mobile Sidebar (new version) -->
+      <amp-sidebar id="sidebar" layout="nodisplay" side="right" class="mobile-menu">
+      <div class="mobile-nav-header">
+        <button class="sidebar-close" on="tap:sidebar.close">
+            ✕
+        </button>
+      </div>
+      <nav class="nav-links mobile-nav">
+        <a href="#home" role="button" tabindex="0" on="tap:sidebar.close">Home</a>
+        <a href="#about" role="button" tabindex="0" on="tap:sidebar.close">About</a>
+        <a href="#causes" role="button" tabindex="0" on="tap:sidebar.close">Causes</a>
+        <a href="#donate" role="button" tabindex="0" on="tap:sidebar.close">Donate</a>
+        <a href="#gallery" role="button" tabindex="0" on="tap:sidebar.close">Gallery</a>
+        <a href="#rules" role="button" tabindex="0" on="tap:sidebar.close">Rules</a>
+        <a href="#team" role="button" tabindex="0" on="tap:sidebar.close">Team</a>
+        <a href="#contact" role="button" tabindex="0" on="tap:sidebar.close">Contact</a>
+      </nav>
+      </amp-sidebar>
     </div>
 </nav>
 
