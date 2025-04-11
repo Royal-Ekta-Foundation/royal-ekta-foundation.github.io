@@ -86,8 +86,11 @@
     padding: 5px;
     margin: -5px;
 }
+/* Desktop vs Mobile Visibility */
 .desktop-only {
     display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
 .mobile-only {
@@ -103,9 +106,39 @@
         display: block;
     }
     
-    .mobile-nav {
+    /* Enhanced Mobile Nav */
+    .nav-links.mobile-nav {
+        display: flex;
         flex-direction: column;
-        gap: 15px;
+        gap: 12px;
+        padding: 16px 0;
+    }
+
+    .nav-links.mobile-nav a {
+        display: block;
+        padding: 16px 24px;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--dark-color);
+        text-decoration: none;
+        transition: background-color 0.2s ease;
+        min-height: 48px; /* Minimum touch target size */
+        line-height: 1.5;
+    }
+
+    .nav-links.mobile-nav a:active {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    /* Visual feedback for touch */
+    .nav-links.mobile-nav a:active {
+        transform: scale(0.98);
+    }
+
+    /* Better focus states for accessibility */
+    .nav-links.mobile-nav a:focus-visible {
+        outline: 2px solid var(--primary-color);
+        outline-offset: -2px;
     }
 }
         /* Add this to your existing CSS */
