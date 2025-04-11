@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Royal Ekta Foundation | Empowering All Communities </title>
+    <meta name="description" content="Royal Ekta Foundation empowering communities through education, healthcare, and sustainable development across 15+ countries.">
+    <meta name="keywords" content="NGO, Royal Ekta Foundation, donate, education, healthcare, development, charity, nonprofit">
+    <meta name="author" content="Royal Ekta Foundation">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="small-logo.png">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        /* General Responsive Defaults */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Gallery Fix */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Team Section Fix */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Rules Centering Fix */
+.rules-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.rules-list li {
+    margin-bottom: 10px;
+}
+
+/* Footer Icons Responsiveness */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Optional: Navbar stacking for mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-content {
+        flex-direction: column;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+}
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            --primary-color: #1671b7;
+            --secondary-color: #FF6B6B;
+            --accent-color: #4ECDC4;
+            --dark-color: #2C3E50;
+            --light-color: #F5F6F8;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--dark-color);
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-transform: uppercase;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1D425E;
+            transform: translateY(-2px);
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            width: 100%;
+            padding: 20px 0;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--dark-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(42, 92, 130, 0.8), rgba(42, 92, 130, 0.8)),
+                        url('hero-bg.jpg') center/cover;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        /* About Section */
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 20px;
+            background: var(--light-color);
+            border-radius: 10px;
+        }
+
+        .stat-box h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        /* Causes Section */
+        .causes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .cause-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .cause-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .cause-image {
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .cause-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cause-content {
+            padding: 25px;
+        }
+
+        .cause-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: #eee;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        .progress {
+            height: 100%;
+            background: var(--accent-color);
+            border-radius: 4px;
+        }
+
+        /* Donation Section */
+        .donation-section {
+            background: var(--light-color);
+        }
+
+        .donation-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .donation-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .donation-card i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        /* Team Section */
+.team-section {
+    background-color: #f9fbfd;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.team-member {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.team-member img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.member-info {
+    padding: 20px;
+    background: #fff;
+}
+
+.member-info h4 {
+    margin: 10px 0 5px;
+    font-size: 1.25rem;
+    color: var(--primary-color);
+}
+
+.member-info p {
+    font-size: 1rem;
+    color: var(--dark-color);
+}
+
+/* Responsive Improvements */
+@media (max-width: 768px) {
+    .team-member img {
+        height: 220px;
+    }
+}
+
+        /* Gallery Section */
+.gallery {
+    background-color: #f5f7fa;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Optional: Responsive max height */
+.gallery-grid img {
+    max-height: 350px;
+}
+
+        /* Rules Section */
+        .section-title.text-center {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.rules-list {
+    list-style-type: none;
+    padding: 0;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.rules-list li {
+    background: #f9f9f9;
+    margin: 10px 0;
+    padding: 15px 20px;
+    border-left: 5px solid #007BFF;
+    border-radius: 8px;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer .social-icons a {
+            margin: 0 10px;
+            color: white;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-icons a:hover {
+            color: var(--accent-color);
+        }
+
+        footer p {
+            margin: 10px 0 0;
+        }
+        @media (max-width: 768px) {
+            .gallery-grid img {
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <a href="#home" style="display: flex; align-items: center; text-decoration: none;">
+                    <img src="small-logo.png" alt="Royal Ekta Foundation Logo" style="height: 50px; margin-right: 10px;">
+                    <span style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color);">Royal Ekta Foundation</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#causes">Causes</a>
+                <a href="#donate">Donate</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#rules">Rules</a>
+                <a href="#team">Team</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>    
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Together We Can Make a Difference</h1>
+                <p>Empowering communities through education, healthcare, and sustainable development initiatives worldwide</p>
+                <a href="https://wa.link/f19nx6" class="btn btn-primary">Donate Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section-padding" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Our Foundation</h2>
+                <h3>8 Years of Transforming Lives</h3>
+            </div>
+            <div class="about">
+                <div class="about-image">
+                    <img src="logo.png" alt="Community Support">
+                </div>
+                <div class="about-content">
+                    <h3>Our Mission & Vision</h3>
+                    <p>We are committed to creating sustainable change through innovative solutions in education, healthcare, and economic development...</p>
+                    <div class="about-stats">
+                        <div class="stat-box">
+                            <h3>1.5K+</h3>
+                            <p>Lives Impacted</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3>8+</h3>
+                            <p>Active Projects</p>
+                        </div>
+                        <div class="stat-box">
+                            <h3>2+</h3>
+                            <p>States Served</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Causes Section -->
+    <section class="section-padding" id="causes">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Key Causes</h2>
+                <p>Join us in supporting critical initiatives</p>
+            </div>
+            <div class="causes-grid">
+                <div class="cause-card">
+                    <div class="cause-image">
+                        <img src="image/education.jpg" alt="Education Initiative">
+                    </div>
+                    <div class="cause-content">
+                        <h3>Education for All</h3>
+                        <p>Reach Children and providing scholarships for underprivileged children</p>
+                    </div>
+                </div>
+                <div class="cause-card">
+                    <div class="cause-image">
+                        <img src="image/healthcare.jpg" alt="Healthcare Initiative">
+                    </div>
+                    <div class="cause-content">
+                        <h3>Healthcare for All</h3>
+                        <p>Building trust and providing healthcare for underprivileged people</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section class="section-padding donation-section" id="donate">
+        <div class="container">
+            <div class="section-title">
+                <h2>Make an Impact</h2>
+                <p>Choose your donation method</p>
+            </div>
+            <div class="donation-options">
+                <div class="donation-card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>One-Time Donation</h3>
+                    <p>Make a single contribution to support our work</p>
+                    <a href="https://wa.link/f19nx6" class="btn btn-primary">Connect With Us</a>
+                </div>
+                <div class="donation-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Monthly Support</h3>
+                    <p>Become a sustaining member with monthly gifts</p>
+                    <a href="https://wa.link/f19nx6" class="btn btn-primary">Connect With Us</a>
+                </div>
+                <div class="donation-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h3>Corporate Giving</h3>
+                    <p>Partner with us through corporate sponsorship</p>
+                    <a href="https://wa.link/f19nx6" class="btn btn-primary">Connect With Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section-padding gallery" id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Gallery</h2>
+                <p>A glimpse of our impact</p>
+            </div>
+            <div class="gallery-grid">
+                <img src="image/gallery1.jpg" alt="NGO Certificate">
+                <img src="image/gallery2.jpg" alt="NGO Certificate">
+                <img src="image/gallery3.jpg" alt="NGO Memorandum">
+                <img src="image/gallery4.jpg" alt="NGO Memorandum">
+                <img src="image/gallery5.jpg" alt="Healthcare Services By NGO">
+                <img src="image/gallery6.jpg" alt="NGO Work">
+                <img src="image/gallery7.jpg" alt="NGO Work">
+                <img src="image/gallery8.jpg" alt="NGO Work">
+                <img src="image/gallery9.jpg" alt="NGO Work">
+                <img src="image/gallery10.jpg" alt="NGO Work">
+            </div>
+        </div>
+    </section>
+
+    <!-- Rules Section -->
+    <section class="section-padding" id="rules">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Core Values & Rules</h2>
+                <p>Guiding principles of our foundation</p>
+            </div>
+            <ul class="rules-list">
+                <li>Providing Health And Education To All</li>
+                <li>Transparency in all operations and reporting</li>
+                <li>Equal opportunity for all communities</li>
+                <li>Prioritizing sustainability and long-term impact</li>
+                <li>Respect for local cultures and customs</li>
+                <li>Strict adherence to safety and ethics</li>
+                <li>Promoting inclusive growth without discrimination</li>
+                <li>Fostering partnerships with local and global organizations</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section-padding team-section" id="team">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Leadership</h2>
+                <p>Meet our dedicated team</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="image/team1.jpg" alt="Altaf Ahmed Khan">
+                    <div class="member-info">
+                        <h4>Altaf Ahmed Khan</h4>
+                        <p>President</p>
+                    </div>
+                </div>
+                <!-- Add more team members here -->
+                <div class="team-member">
+                    <img src="image/team1.jpg" alt="Vijay Yadav">
+                    <div class="member-info">
+                        <h4>Vijay Yadav</h4>
+                        <p>Vice President</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="image/team1.jpg" alt="Sajid Khan">
+                    <div class="member-info">
+                        <h4>Sajid Khan</h4>
+                        <p>Secretary</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="image/team1.jpg" alt="Sanadil Khan">
+                    <div class="member-info">
+                        <h4>Sanadil Khan</h4>
+                        <p>Junior Secretary</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="image/team1.jpg" alt="Vijay Mohan">
+                    <div class="member-info">
+                        <h4>Vijay Mohan</h4>
+                        <p>Treasurer</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="image/team1.jpg" alt="Anil Yadav">
+                    <div class="member-info">
+                        <h4>Anil Yadav</h4>
+                        <p>Junior Treasurer</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="image/team1.jpg" alt="Ajay Singh">
+                    <div class="member-info">
+                        <h4>Ajay Singh</h4>
+                        <p>Member</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="image/team1.jpg" alt="Parvez Shaikh">
+                    <div class="member-info">
+                        <h4>Parvez Shaikh</h4>
+                        <p>Member</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="image/team1.jpg" alt="Arif Khan">
+                    <div class="member-info">
+                        <h4>Arif Khan</h4>
+                        <p>Member</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="image/team1.jpg" alt="Bablu Yadav">
+                    <div class="member-info">
+                        <h4>Bablu Yadav</h4>
+                        <p>Member</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="image/team1.jpg" alt="Atik Shaikh">
+                    <div class="member-info">
+                        <h4>Atik Shaikh</h4>
+                        <p>Member</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    <!-- Additional Sections Can Include:
+         - Impact Stories
+         - Events Calendar
+         - Blog/News
+         - Partners/Sponsors
+         - Financial Reports
+         - Volunteer Form
+         - Gallery
+         - Contact Form
+    -->
+
+    <script>
+        // Add JavaScript for interactive elements
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                document.querySelector('.navbar').style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                document.querySelector('.navbar').style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+    </script>
+    <!-- Footer Section -->
+    <footer id="contact">
+        <div class="container">
+            <h3>Contact Us</h3>
+            <p>Email: royalektafoundationekkadamaage@gmail.com | Phone: +91 9892110014</p>
+            <p>Address: Ram Mandir Road Goregaon West 400104, Mumbai, Maharashtra, India</p>
+            <p>&copy; 2025 Royal Ekta Foundation. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
