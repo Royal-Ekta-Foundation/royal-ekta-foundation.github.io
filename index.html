@@ -40,6 +40,19 @@
         gap: 15px;
     }
 }
+        /* Add this to your existing CSS */
+@media (max-width: 768px) {
+    amp-sidebar .nav-links {
+        display: flex !important;
+        padding: 20px;
+    }
+
+    amp-sidebar .nav-links a {
+        color: var(--dark-color);
+        padding: 10px;
+        font-size: 1.1rem;
+    }
+}
         /* Original CSS with minor adjustments */
         * {
             margin: 0;
@@ -846,5 +859,14 @@
             </div>
         </div>
     </footer>
+    <script>
+        // In your Service Worker (sw.js)
+self.addEventListener('fetch', (event) => {
+    event.respondWith(
+        caches.match(event.request)
+            .then(response => response || fetch(event.request))
+    );
+});
+    </script>
 </body>
 </html>
