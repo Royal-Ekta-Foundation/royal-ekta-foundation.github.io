@@ -8,161 +8,21 @@
     <meta name="keywords" content="NGO, Royal Ekta Foundation, donate, education, healthcare, development, charity, nonprofit">
     <meta name="author" content="Royal Ekta Foundation">
     <link rel="icon" type="image/png" href="small-logo.png">
+    
     <!-- AMP Boilerplate -->
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    
     <!-- AMP Components -->
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-    <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" data-fonts>
     <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
-    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
     <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    
     <style amp-custom>
-        /* Add these to your existing CSS */
-        /* Add to your amp-custom styles */
-@media (max-width: 768px) {
-    amp-sidebar {
-    z-index: 9999;
-    background: #fff; /* Solid white background */
-}
-
-/* Remove the :after pseudo-element */
-.nav-links.mobile-nav a:after {
-    display: none;
-}
-    .nav-links.mobile-nav {
-        display: flex !important;
-        flex-direction: column;
-        padding: 20px 0;
-    }
-
-    .nav-links.mobile-nav a {
-        color: var(--dark-color) !important;
-        padding: 15px 25px;
-        font-size: 1.1rem;
-        text-decoration: none;
-        transition: background 0.3s ease;
-        position: static;
-        /* Ensure touch target size */
-        min-height: 48px;
-        display: flex;
-        align-items: center;
-    }
-
-    .nav-links.mobile-nav a:active {
-        background: var(--light-color);
-    }
-
-    /* Add visual feedback for taps */
-    .nav-links.mobile-nav a:after {
-        content: '';
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        background: rgba(0,0,0,0.05);
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-
-    .nav-links.mobile-nav a:active:after {
-        opacity: 1;
-    }
-}
-.mobile-nav-header {
-    display: flex;
-    justify-content: flex-end;
-    padding: 15px;
-    border-bottom: 1px solid #eee;
-}
-
-.sidebar-close {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: var(--dark-color);
-    padding: 5px;
-    margin: -5px;
-}
-/* Desktop vs Mobile Visibility */
-.desktop-only {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-.mobile-only {
-    display: none;
-}
-
-@media (max-width: 768px) {
-    .desktop-only {
-        display: none;
-    }
-    
-    .mobile-only {
-        display: block;
-    }
-    
-    /* Enhanced Mobile Nav */
-    .nav-links.mobile-nav {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        padding: 16px 0;
-    }
-
-    .nav-links.mobile-nav a {
-        display: block;
-        padding: 16px 24px;
-        font-size: 1.1rem;
-        font-weight: 500;
-        color: var(--dark-color);
-        text-decoration: none;
-        transition: background-color 0.2s ease;
-        min-height: 48px; /* Minimum touch target size */
-        line-height: 1.5;
-    }
-
-    .nav-links.mobile-nav a:active {
-        background-color: rgba(0, 0, 0, 0.05);
-    }
-
-    /* Visual feedback for touch */
-    .nav-links.mobile-nav a:active {
-        transform: scale(0.98);
-    }
-
-    /* Better focus states for accessibility */
-    .nav-links.mobile-nav a:focus-visible {
-        outline: 2px solid var(--primary-color);
-        outline-offset: -2px;
-    }
-}
-        /* Add this to your existing CSS */
-        /* Original CSS with minor adjustments */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        :root {
-            --primary-color: #1671b7;
-            --secondary-color: #FF6B6B;
-            --accent-color: #4ECDC4;
-            --dark-color: #2C3E50;
-            --light-color: #F5F6F8;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Rest of your original CSS styles */
+        /* Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -224,11 +84,6 @@
             color: white;
         }
 
-        .btn-primary:hover {
-            background: #1D425E;
-            transform: translateY(-2px);
-        }
-
         /* Navigation */
         .navbar {
             position: fixed;
@@ -249,32 +104,49 @@
             font-size: 1.8rem;
             font-weight: 700;
             color: var(--primary-color);
-        }
-
-        .nav-links {
             display: flex;
-            gap: 30px;
-            transition: all 0.3s ease;
+            align-items: center;
+            gap: 10px;
         }
 
-        .nav-links a {
+        /* Mobile Navigation */
+        amp-sidebar {
+            width: 280px;
+            max-width: 80vw;
+            background: #fff;
+            box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+        }
+
+        .mobile-nav-header {
+            display: flex;
+            justify-content: flex-end;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .nav-links.mobile-nav {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 0;
+        }
+
+        .nav-links.mobile-nav a {
+            padding: 15px 25px;
+            font-size: 1.1rem;
             color: var(--dark-color);
             text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
+            transition: background 0.2s ease;
         }
 
-        .nav-links a:hover {
-            color: var(--secondary-color);
+        .nav-links.mobile-nav a:active {
+            background: rgba(0,0,0,0.05);
         }
 
         .menu-toggle {
             display: none;
             background: none;
             border: none;
-            color: var(--dark-color);
-            font-size: 1.5rem;
-            cursor: pointer;
+            padding: 10px;
         }
 
         /* Hero Section */
@@ -299,11 +171,6 @@
             line-height: 1.2;
         }
 
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-        }
-
         /* About Section */
         .about {
             display: grid;
@@ -314,7 +181,6 @@
 
         .about-image img {
             width: 100%;
-            height: auto;
             border-radius: 10px;
         }
 
@@ -344,11 +210,6 @@
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .cause-card:hover {
-            transform: translateY(-10px);
         }
 
         /* Donation Section */
@@ -358,11 +219,11 @@
             gap: 30px;
         }
 
-        /* Team Section */
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
+        .donation-card {
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--light-color);
+            border-radius: 10px;
         }
 
         /* Gallery Section */
@@ -372,11 +233,18 @@
             gap: 15px;
         }
 
-        .gallery-grid img {
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .team-member img {
             width: 100%;
-            height: auto;
-            border-radius: 8px;
+            height: 250px;
             object-fit: cover;
+            border-radius: 8px;
         }
 
         /* Rules Section */
@@ -395,37 +263,30 @@
             text-align: center;
         }
 
-        /* Mobile Styles */
+        /* Responsive Styles */
         @media (max-width: 768px) {
+            .desktop-only {
+                display: none;
+            }
+            
+            .mobile-only {
+                display: block;
+            }
+            
             .menu-toggle {
                 display: block;
             }
-
-            .nav-links {
-                display: none;
-                width: 100%;
-                flex-direction: column;
-                padding: 20px 0;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .about {
-                grid-template-columns: 1fr;
-            }
-
+            
             .hero h1 {
                 font-size: 2.5rem;
             }
-
-            .team-member img {
-                height: 250px;
+            
+            .about {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-stats {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -433,96 +294,61 @@
             .hero h1 {
                 font-size: 2rem;
             }
-
+            
             .section-title h2 {
                 font-size: 2rem;
             }
-
-            .about-stats {
-                grid-template-columns: 1fr;
-            }
-        }
-        /* ... (Keep all your original CSS here) ... */
-        
-        /* AMP-specific adjustments */
-        amp-img {
-            height: auto;
-        }
-        
-        .menu-toggle svg {
-            width: 24px;
-            height: 24px;
-            fill: var(--dark-color);
-        }
-        
-        .donation-card svg {
-            width: 48px;
-            height: 48px;
-            margin-bottom: 15px;
-            fill: var(--primary-color);
         }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <!-- In the Navigation section -->
-<nav class="navbar">
-    <div class="container nav-content">
-        <div class="logo">
-            <a href="#home" style="display: flex; align-items: center; text-decoration: none;">
-                <amp-img src="small-logo.png" alt="Royal Ekta Foundation Logo" width="50" height="50" layout="fixed"></amp-img>
-                <span style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color);">Royal Ekta Foundation</span>
-            </a>
-        </div>
-        
-        <!-- Desktop Navigation -->
-        <div class="nav-links desktop-only">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#causes">Causes</a>
-            <a href="#donate">Donate</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#rules">Rules</a>
-            <a href="#team">Team</a>
-            <a href="#contact">Contact</a>
-        </div>
-
-        <!-- Mobile Menu Button -->
-        <button class="menu-toggle mobile-only" on="tap:sidebar.toggle">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
-        </button>
-
-        <!-- Mobile Sidebar -->
-        <amp-sidebar id="sidebar" layout="nodisplay" side="right" style="width: 80vw; z-index: 9999;">
-            <div class="mobile-nav-header">
-                <button class="sidebar-close" on="tap:sidebar.close" aria-label="Close menu">
-                    ✕
-                </button>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <amp-img src="small-logo.png" alt="Logo" width="50" height="50" layout="fixed"></amp-img>
+                <span>Royal Ekta Foundation</span>
             </div>
-            <nav class="nav-links mobile-nav">
-                <a href="#home" role="button" tabindex="0" on="tap:sidebar.close">Home</a>
-                <a href="#about" role="button" tabindex="0" on="tap:sidebar.close">About</a>
-                <a href="#causes" role="button" tabindex="0" on="tap:sidebar.close">Causes</a>
-                <a href="#donate" role="button" tabindex="0" on="tap:sidebar.close">Donate</a>
-                <a href="#gallery" role="button" tabindex="0" on="tap:sidebar.close">Gallery</a>
-                <a href="#rules" role="button" tabindex="0" on="tap:sidebar.close">Rules</a>
-                <a href="#team" role="button" tabindex="0" on="tap:sidebar.close">Team</a>
-                <a href="#contact" role="button" tabindex="0" on="tap:sidebar.close">Contact</a>
-            </nav>
-        </amp-sidebar>
-        <!-- Mobile Sidebar (new version) -->
-      <amp-sidebar id="sidebar" layout="nodisplay" side="right" class="mobile-menu">
-      <div class="mobile-nav-header">
-        <button class="sidebar-close" on="tap:sidebar.close">
-            ✕
-        </button>
-      </div>
-      <nav class="nav-links mobile-nav">
-        
-      </nav>
-      </amp-sidebar>
-    </div>
-</nav>
+            
+            <!-- Desktop Navigation -->
+            <div class="nav-links desktop-only">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#causes">Causes</a>
+                <a href="#donate">Donate</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#rules">Rules</a>
+                <a href="#team">Team</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="menu-toggle mobile-only" on="tap:sidebar.toggle" aria-label="Open menu">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                </svg>
+            </button>
+
+            <!-- Mobile Sidebar -->
+            <amp-sidebar id="sidebar" layout="nodisplay" side="right">
+                <div class="mobile-nav-header">
+                    <button class="sidebar-close" on="tap:sidebar.close" aria-label="Close menu">
+                        ✕
+                    </button>
+                </div>
+                <nav class="nav-links mobile-nav">
+                    <a href="#home" on="tap:sidebar.close">Home</a>
+                    <a href="#about" on="tap:sidebar.close">About</a>
+                    <a href="#causes" on="tap:sidebar.close">Causes</a>
+                    <a href="#donate" on="tap:sidebar.close">Donate</a>
+                    <a href="#gallery" on="tap:sidebar.close">Gallery</a>
+                    <a href="#rules" on="tap:sidebar.close">Rules</a>
+                    <a href="#team" on="tap:sidebar.close">Team</a>
+                    <a href="#contact" on="tap:sidebar.close">Contact</a>
+                </nav>
+            </amp-sidebar>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
