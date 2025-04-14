@@ -303,52 +303,49 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container nav-content">
-            <div class="logo">
-                <amp-img src="small-logo.png" alt="Logo" width="50" height="50" layout="fixed"></amp-img>
-                <span>Royal Ekta Foundation</span>
-            </div>
-            
-            <!-- Desktop Navigation -->
-            <div class="nav-links desktop-only">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#causes">Causes</a>
-                <a href="#donate">Donate</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#rules">Rules</a>
-                <a href="#team">Team</a>
-                <a href="#contact">Contact</a>
-            </div>
-
-            <!-- Mobile Menu Button -->
-            <button class="menu-toggle mobile-only" on="tap:sidebar.toggle" aria-label="Open menu">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
-                </svg>
-            </button>
-
-            <!-- Mobile Sidebar -->
-            <amp-sidebar id="sidebar" layout="nodisplay" side="right">
-                <div class="mobile-nav-header">
-                    <button class="sidebar-close" on="tap:sidebar.close" aria-label="Close menu">
-                        ✕
-                    </button>
-                </div>
-                <nav class="nav-links mobile-nav">
-                    <a href="#home" on="tap:sidebar.close">Home</a>
-                    <a href="#about" on="tap:sidebar.close">About</a>
-                    <a href="#causes" on="tap:sidebar.close">Causes</a>
-                    <a href="#donate" on="tap:sidebar.close">Donate</a>
-                    <a href="#gallery" on="tap:sidebar.close">Gallery</a>
-                    <a href="#rules" on="tap:sidebar.close">Rules</a>
-                    <a href="#team" on="tap:sidebar.close">Team</a>
-                    <a href="#contact" on="tap:sidebar.close">Contact</a>
-                </nav>
-            </amp-sidebar>
+    <amp-sidebar id="sidebar" layout="nodisplay" side="right">
+        <div class="mobile-nav-header">
+          <button class="sidebar-close" on="tap:sidebar.close" aria-label="Close menu">✕</button>
         </div>
-    </nav>
+        <nav class="nav-links mobile-nav">
+          <a href="#home" on="tap:sidebar.close">Home</a>
+          <a href="#about" on="tap:sidebar.close">About</a>
+          <a href="#causes" on="tap:sidebar.close">Causes</a>
+          <a href="#donate" on="tap:sidebar.close">Donate</a>
+          <a href="#gallery" on="tap:sidebar.close">Gallery</a>
+          <a href="#rules" on="tap:sidebar.close">Rules</a>
+          <a href="#team" on="tap:sidebar.close">Team</a>
+          <a href="#contact" on="tap:sidebar.close">Contact</a>
+        </nav>
+      </amp-sidebar>
+
+      <nav class="navbar">
+        <div class="container nav-content">
+          <div class="logo">
+            <amp-img src="small-logo.png" alt="Logo" width="50" height="50" layout="fixed"></amp-img>
+            <span>Royal Ekta Foundation</span>
+          </div>
+
+          <!-- Desktop Nav -->
+      <div class="nav-links desktop-only">
+        <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#causes">Causes</a>
+            <a href="#donate">Donate</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#rules">Rules</a>
+            <a href="#team">Team</a>
+            <a href="#contact">Contact</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="menu-toggle mobile-only" on="tap:sidebar.toggle" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
@@ -768,7 +765,6 @@
                             <p>Member</p>
                         </div>
                     </div>
-        
                 </div>
             </div>
         </section>
